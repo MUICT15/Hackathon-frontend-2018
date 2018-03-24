@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
       <nav v-if="isLoggedIn" class="navbar navbar-expand-sm navbar-custom">
         <a class="navbar-brand" href="#">B-owner</a>
          <ul class="navbar-nav">
@@ -70,21 +71,35 @@
                     </div>
                   </div>
       <router-view></router-view>
+=======
+    <header>
+      <span>Vue.js PWA</span>
+    </header>
+    <main>
+      <img src="./assets/logo.png" alt="Vue.js PWA">
+      <router-view></router-view>
+    </main>
+>>>>>>> ca93fbeb755161a0f90270ff638cb6ed3549a4b9
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   name: 'app',
   data() {
   return {
     isLoggedIn:true
   }
 }
+=======
+  name: 'app'
+>>>>>>> ca93fbeb755161a0f90270ff638cb6ed3549a4b9
 }
 </script>
 
 <style>
+<<<<<<< HEAD
 
 .navbar-custom{
   background-color: #67DAFF ;
@@ -96,6 +111,8 @@ export default {
    color: white;
 }
 
+=======
+>>>>>>> ca93fbeb755161a0f90270ff638cb6ed3549a4b9
 body {
   margin: 0;
 }
