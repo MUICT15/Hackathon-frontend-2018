@@ -14,3 +14,4 @@ export const feather = feathers()
   }))
 export const userService = feather.service('users');
 export const consumerProductService  = feather.service('consumer-product');
+export const freelancerBiddingService = feather.service('freelancer-bidding');

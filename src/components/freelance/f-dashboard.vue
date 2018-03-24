@@ -4,13 +4,38 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Product Detail</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <h3>Title : </h3>
+                <h4>Type : </h4>
+                <h4>Bussiness owner name : </h4>
+                <p>Detail: </p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <h3>{{productTitle}}</h3>
+                <h4>{{typeOfProduct}}</h4>
+                <h4>{{productOwner}}</h4>
+                <p>{{productDetail}}</p>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <form>
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label">Your Bid</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Bid">
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -53,7 +78,7 @@
             <td>{{data.status}}</td>
             <td>
               <button class="btn btn-success" data-toggle="modal" data-target="#bid">bid price</button>
-              <button class="btn btn-dager" @click="removeProject(index , data.name , data._id)">remove</button>
+              <button class="btn btn-danger" @click="removeProject(index , data.name , data._id)">remove</button>
             </td>
           </tr>
         </tbody>
@@ -80,8 +105,8 @@
             <td>{{data.typeOfProduct}}</td>
             <td>{{data.status}}</td>
             <td>
-              <button class="btn btn-success" data-toggle="modal" data-target="#bid">bid price</button>
-              <button class="btn btn-dager" @click="removeProject(index , data.name , data._id)">remove</button>
+              <button class="btn btn-success" data-toggle="modal" data-target="#bid" @click="selectProductBeforeBidding(index)">bid price</button>
+              <button class="btn btn-danger" @click="removeProject(index , data.name , data._id)">remove</button>
             </td>
           </tr>
         </tbody>
@@ -100,7 +125,13 @@
     data: function () {
       return {
         listProject: [],
-        listBidding: []
+        listBidding: [],
+        productID: '',
+        productTitle: '',
+        typeOfProduct: '',
+        productOwner: '',
+        productDetail: '',
+        productPrice: ''
       }
     },
     created: function () {
@@ -108,9 +139,9 @@
         console.log(data.jobWorking)
         this.listProject = data.jobWorking;
       })
-      consumerProductService.on('created' , (data)=>{
-          console.log(data)
-          this.listBidding.push(data)
+      consumerProductService.on('created', (data) => {
+        console.log(data)
+        this.listBidding.push(data)
       })
       feather.authenticate({
         strategy: 'jwt',
@@ -123,18 +154,27 @@
       })
     },
     methods: {
-      removeProject: function (index , name , id) {
-          this.listProject.splice(index , 1)
-          userService.patch(cookie.get('userId') , {
-              $pull:{
-                  jobWorking:{
-                      _id: id
-                  }
-              }
-          }).then((data)=>{
-              console.log(data)
-          })
-      }
+      removeProject: function (index, name, id) {
+        this.listProject.splice(index, 1)
+        userService.patch(cookie.get('userId'), {
+          $pull: {
+            jobWorking: {
+              _id: id
+            }
+          }
+        }).then((data) => {
+          console.log(data)
+        })
+      },
+      selectProductBeforeBidding: function (id) {
+        this.productTitle = this.listBidding[id].title;
+        this.productID = this.listBidding[id]._id;
+        this.typeOfProduct = this.listBidding[id].typeOfProduct;
+        this.productOwner = this.listBidding[id].consumerName;
+        this.productDetail = this.listBidding[id].detail;
+        this.productPrice = this.listBidding[id].price;
+      },
+      bidProduct: function (id) {}
     }
   }
 
