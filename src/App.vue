@@ -27,7 +27,7 @@
     name: 'app',
     data() {
       return {
-        isLoggedIn: true
+    isLoggedIn:true
       }
     },
     name: 'app'
