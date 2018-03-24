@@ -6,10 +6,10 @@ import io from 'socket.io-client'
 import cookie from './cookie';
 const socket = io('http://api.localhost/')
 
-const feathersClient = feathers()
+export const feather = feathers()
   .configure(hooks())
   .configure(socketio(socket))
   .configure(auth({
     storage: cookie
   }))
-export const userService = feathersClient.service('users');
+export const userService = feather.service('users');

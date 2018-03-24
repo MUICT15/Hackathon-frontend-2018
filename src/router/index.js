@@ -4,7 +4,6 @@ import home from '@/components/home'
 import bDashboard from '@/components/b-owner/b-dashboard'
 import mtoForm from '@/components/b-owner/mto-form'
 import otsForm from '@/components/b-owner/ots-form'
-import otsTemplete from '@/components/b-owner/ots-templete'
 import fDashboard from '@/components/freelance/f-dashboard'
 import fProfile from '@/components/freelance/f-profile'
 import jobBidding from '@/components/freelance/job-bidding'
@@ -39,11 +38,6 @@ export default new Router({
       path: '/otsForm',
       name: 'otsForm',
       component: otsForm
-    },
-    {
-      path: '/otsTemplete',
-      name: 'otsTemplete',
-      component: otsTemplete
     },
     {
       path: '/fDashboard',
