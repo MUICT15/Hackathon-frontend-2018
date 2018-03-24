@@ -31,9 +31,10 @@
                 <div class="form-group row">
                   <label for="inputPassword" class="col-sm-4 col-form-label">Your Bid</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPassword" placeholder="Bid">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Bid" v-model="bidPrice">
                   </div>
                 </div>
+                <button type="button" class="btn btn-primary" @click="bidProduct()">send Bid</button>
               </form>
             </div>
           </div>
@@ -118,7 +119,8 @@
   import {
     userService,
     feather,
-    consumerProductService
+    consumerProductService,
+    freelancerBiddingService
   } from '../../feathers';
   import cookie from 'js-cookie';
   export default {
@@ -131,7 +133,8 @@
         typeOfProduct: '',
         productOwner: '',
         productDetail: '',
-        productPrice: ''
+        productPrice: '',
+        bidPrice: ''
       }
     },
     created: function () {
@@ -174,7 +177,20 @@
         this.productDetail = this.listBidding[id].detail;
         this.productPrice = this.listBidding[id].price;
       },
-      bidProduct: function (id) {}
+      bidProduct: function () {
+          console.log(this.productID)
+        feather.authenticate({
+          strategy: 'jwt',
+          accessToken: cookie.get('feathers-jwt')
+        }).then((data) => {
+          freelancerBiddingService.create({
+              jobID: this.productID,
+              freelancerID: cookie.get('userId'),
+              name: 'test',
+              price: this.bidPrice
+          })
+        })
+      }
     }
   }
 
