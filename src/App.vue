@@ -1,65 +1,52 @@
 <template>
   <div id="app">
-    <nav v-if="isLoggedIn" class="navbar navbar-expand-sm navbar-custom">
-      <a class="navbar-brand" href="#">B-owner</a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-            Registration
-          </button>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </nav>
-    <nav v-else class="navbar navbar-expand-sm navbar-custom">
-      <a class="navbar-brand" href="#">Freelance</a>
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav mr-2">
+          <li class="nav-item" >
+            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google" >Registration</a>/
+            <a  style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Login</a>
+          </li>
+          </ul>
+      </div>
     </nav>
     <!-- The Modal -->
-    <div class="modal fade" id="myModal">
+    <!-- <div class="modal fade" id="myModal">
       <div class="modal-dialog">
         <div class="modal-content">
-
-          <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Registration</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
-          <!-- Modal body -->
           <div class="modal-body">
             <div class="container">
               <center>
-                <!-- <h1>Registration</h1> -->
                 <div class="row">
                   <div class="col-sm">
                     <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
                     <br>
                     <h5>For business owner</h5>
                     <br>
-                    <a href="#" class="btn btn-info" role="button">Register</a>
+                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Register</a>
                   </div>
                   <div class="col-sm">
                     <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
 
                     <br>
                     <h5>For freelancer</h5>
-                    <a href="#" class="btn btn-info" role="button">Basic Registration</a>
+                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Basic Registration</a>
                     <br>
                     <br>
-                    <a href="#" class="btn btn-info" role="button">Fast-Lane Registration</a>
+                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Fast-Lane Registration</a>
                   </div>
                 </div>
               </center>
@@ -70,7 +57,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -93,9 +80,17 @@
     background-color: #67DAFF;
   }
 
-  .nav-link {
+  .nav-link{
     color: white;
+    font-size: 20px;
   }
+  .nav-link:hover{
+    color: white;
+    font-size: 20px;
+  }
+  /* .navbar-toggler-icon{
+    background-color: black;
+  } */
 
   .navbar-brand {
     color: white;
