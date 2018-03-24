@@ -8,56 +8,14 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <ul class="navbar-nav mr-2">
-          <li class="nav-item" >
-            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google" >Registration</a>/
-            <a  style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Login</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-auto">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Registration</button>
+        <button type="button" class="btn btn-bg" data-toggle="modal" data-target="#exampleModal">Login</button>
           </li>
           </ul>
       </div>
     </nav>
-    <!-- The Modal -->
-    <!-- <div class="modal fade" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Registration</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <div class="modal-body">
-            <div class="container">
-              <center>
-                <div class="row">
-                  <div class="col-sm">
-                    <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
-                    <br>
-                    <h5>For business owner</h5>
-                    <br>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Register</a>
-                  </div>
-                  <div class="col-sm">
-                    <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
-
-                    <br>
-                    <h5>For freelancer</h5>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Basic Registration</a>
-                    <br>
-                    <br>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Fast-Lane Registration</a>
-                  </div>
-                </div>
-              </center>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -67,7 +25,7 @@
     name: 'app',
     data() {
       return {
-        isLoggedIn: true
+    isLoggedIn:true
       }
     },
     name: 'app'
