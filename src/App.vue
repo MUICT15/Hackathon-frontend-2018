@@ -27,7 +27,8 @@
               <br>
               <button type="button" class="btn btn-primary center" @click="login()">Login</button>
               <router-link to="reg" style="padding:10px">Didn't join yet ? Register</router-link>
-              <br><br>
+              <br>
+              <br>
               <a href="http://api.localhost/auth/google">
                 <button type="button" class="btn google center">Login With Google</button>
               </a>
@@ -38,21 +39,26 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="/">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand rounded-circle" href="#">
+          <img src="./assets/29550207_1542615552515838_771666361_n (1).png" class="rounded-circle" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <ul class="navbar-nav mr-2">
-          <li class="nav-item">
-            <router-link style="display: inline-block" class="nav-link" to="reg">Registration</router-link>/
-            <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <ul class="navbar-nav mr-2">
+            <li class="nav-item">
+              <router-link style="display: inline-block" class="nav-link" to="reg">Registration</router-link>/
+              <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </nav>
     <router-view></router-view>
   </div>
@@ -83,7 +89,11 @@
 
 </script>
 
-<style scoped>
+<style>
+  .navbar-brand {
+    background-color: #03a9f4;
+  }
+
   .google {
     background-color: rgb(155, 21, 3);
     color: white;
@@ -93,6 +103,10 @@
   .center {
     position: relative;
     margin: 0 auto;
+  }
+
+  .active {
+    color: white;
   }
 
   .active {
@@ -154,6 +168,11 @@
     font-weight: 400;
     box-sizing: border-box;
     padding-top: 16px;
+  }
+
+  img {
+    width: 6vw;
+    height: 6vw;
   }
 
 </style>
