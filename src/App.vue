@@ -11,53 +11,13 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <ul class="navbar-nav mr-2">
-          <li class="nav-item" >
-            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google" >Registration</a>/
-            <a  style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Login</a>
+          <li class="nav-item">
+            <a style="display: inline-block" class="nav-link active" href="http://api.localhost/auth/google">Sign up</a>/
+            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Sign in</a>
           </li>
-          </ul>
+        </ul>
       </div>
     </nav>
-    <!-- The Modal -->
-    <!-- <div class="modal fade" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Registration</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <div class="modal-body">
-            <div class="container">
-              <center>
-                <div class="row">
-                  <div class="col-sm">
-                    <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
-                    <br>
-                    <h5>For business owner</h5>
-                    <br>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Register</a>
-                  </div>
-                  <div class="col-sm">
-                    <img style="height: 10vw;" src="https://image.flaticon.com/icons/svg/265/265668.svg">
-
-                    <br>
-                    <h5>For freelancer</h5>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Basic Registration</a>
-                    <br>
-                    <br>
-                    <a href="http://api.localhost/auth/google" class="btn btn-info" role="button">Fast-Lane Registration</a>
-                  </div>
-                </div>
-              </center>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -75,19 +35,24 @@
 
 </script>
 
-<style>
+<style scoped>
+.active{
+  color: white;
+}
   .navbar-custom {
     background-color: #67DAFF;
   }
 
-  .nav-link{
+  .nav-link {
     color: white;
     font-size: 20px;
   }
-  .nav-link:hover{
+
+  .nav-link:hover {
     color: white;
     font-size: 20px;
   }
+
   /* .navbar-toggler-icon{
     background-color: black;
   } */
