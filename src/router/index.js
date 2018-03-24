@@ -9,6 +9,8 @@ import fProfile from '@/components/freelance/f-profile'
 import jobBidding from '@/components/freelance/job-bidding'
 import Login from '@/components/login'
 import Registration from '@/components/register'
+import Payment from '@/components/b-owner/payment'
+import userAgent from '@/components/user-agent'
 
 
 Vue.use(Router)
@@ -58,6 +60,17 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/payment',
+      name: 'Payment',
+      component: Payment
+    },
+    {
+      path: '/userAgent',
+      name: 'userAgent',
+      component: userAgent
     }
+
   ]
 })

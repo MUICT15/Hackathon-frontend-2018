@@ -9,7 +9,7 @@
   </div>
      <div class="row">
     <div class="col-sm">
-      <router-link to="bLogin">Test</router-link>
+      <router-link to="userAgent">Test</router-link>
     </div>
     <div class="col-sm">
       One of three columns
