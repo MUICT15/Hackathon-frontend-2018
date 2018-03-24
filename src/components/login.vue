@@ -3,7 +3,7 @@
     <h1>Login</h1>
     <br>
     <br>
-    <form action="/action_page.php">
+    <form>
       <div class="form-group">
         <label for="email">Email address:</label>
         <input type="text" class="form-control" id="email" v-model="username">
@@ -18,7 +18,7 @@
         </label>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary" @click="login()">Login</button>
+      <button type="button" class="btn btn-primary" @click="login()">Login</button>
       <router-link to="reg" style="padding:10px">Didn't join yet ? Register</router-link>
     </form>
   </div>
@@ -41,7 +41,7 @@
           email: this.username,
           password: this.password
         }).then(response => {
-          console.log(response)
+          this.$router.push('userAgent')
         });
       }
     }
