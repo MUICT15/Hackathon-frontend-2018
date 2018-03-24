@@ -29,12 +29,18 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+<<<<<<< HEAD
         </div>
       </div>
   <div class="row align-items-end" style="background-color:#9ccc65" id="#homeimg">
     <div class="col">
       <h1>Welcome to Star Cruise Platform</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+=======
+     <div class="row">
+    <div class="col-sm">
+      <router-link to="userAgent">Test</router-link>
+>>>>>>> 2903a8668eb9cf5d5642e3f1ae7f22277ca89d50
     </div>
   </div>
   <div class="row align-items-end" style="background-color:#9ccc65" id="#homeimg">

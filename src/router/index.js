@@ -4,11 +4,14 @@ import home from '@/components/home'
 import bDashboard from '@/components/b-owner/b-dashboard'
 import mtoForm from '@/components/b-owner/mto-form'
 import otsForm from '@/components/b-owner/ots-form'
-import otsTemplete from '@/components/b-owner/ots-templete'
 import fDashboard from '@/components/freelance/f-dashboard'
 import fProfile from '@/components/freelance/f-profile'
 import jobBidding from '@/components/freelance/job-bidding'
 import Login from '@/components/login'
+import Registration from '@/components/register'
+import Payment from '@/components/b-owner/payment'
+import userAgent from '@/components/user-agent'
+
 
 Vue.use(Router)
 
@@ -17,6 +20,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home
+    },
+    {
+      path: '/reg',
+      name: 'register',
+      component: Registration
     },
     {
       path: '/bDashboard',
@@ -34,11 +42,6 @@ export default new Router({
       component: otsForm
     },
     {
-      path: '/otsTemplete',
-      name: 'otsTemplete',
-      component: otsTemplete
-    },
-    {
       path: '/fDashboard',
       name: 'fDashboard',
       component: fDashboard
@@ -54,9 +57,20 @@ export default new Router({
       component: jobBidding
     },
     {
-      path: '/Login',
+      path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/payment',
+      name: 'Payment',
+      component: Payment
+    },
+    {
+      path: '/userAgent',
+      name: 'userAgent',
+      component: userAgent
     }
+
   ]
 })

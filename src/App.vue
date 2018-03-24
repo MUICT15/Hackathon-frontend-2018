@@ -12,10 +12,10 @@
         </ul>
         <ul class="navbar-nav mr-2">
           <li class="nav-item" >
-            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google" >Registration</a>/
+            <router-link style="display: inline-block" class="nav-link" to="reg" >Registration</router-link>/
             <a  style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Login</a>
           </li>
-          </ul>
+        </ul>
       </div>
     </nav>
     <router-view></router-view>
@@ -34,22 +34,30 @@
 
 </script>
 
+<<<<<<< HEAD
 <style>
 .navbar-brand{
   background-color:  #03a9f4;
+=======
+<style scoped>
+.active{
+  color: white;
+>>>>>>> 2903a8668eb9cf5d5642e3f1ae7f22277ca89d50
 }
   .navbar-custom {
     background-color: #67DAFF;
   }
 
-  .nav-link{
+  .nav-link {
+    color: rgb(255, 253, 253);
+    font-size: 20px;
+  }
+
+  .nav-link:hover {
     color: white;
     font-size: 20px;
   }
-  .nav-link:hover{
-    color: white;
-    font-size: 20px;
-  }
+
   /* .navbar-toggler-icon{
     background-color: black;
   } */

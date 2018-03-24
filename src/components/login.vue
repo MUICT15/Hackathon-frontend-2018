@@ -1,42 +1,67 @@
 <template>
- <div class="box">
-     <h1>Login</h1><br><br>
+  <div class="box">
+    <h1>Login</h1>
+    <br>
+    <br>
     <form action="/action_page.php">
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="text" class="form-control" id="email" v-model="username">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" v-model="password">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" @click="login()">Login</button>
+      <router-link to="reg" style="padding:10px">Didn't join yet ? Register</router-link>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input class="form-check-input" type="checkbox"> Remember me
-    </label>
-  </div><br>
-  <button type="submit" class="btn btn-primary">Login</button><a href="#`" style="padding:10px">Didn't join yet ? Register</a>
-</form>
- </div>
 </template>
 <script>
-export default {
-  
-}
+  import {
+    feather
+  } from '../feathers';
+  export default {
+    data: function () {
+      return {
+        username: '',
+        password: ''
+      }
+    },
+    methods: {
+      login: function () {
+        feather.authenticate({
+          strategy: 'local',
+          email: this.username,
+          password: this.password
+        }).then(response => {
+          console.log(response)
+        });
+      }
+    }
+  }
+
 </script>
 <style>
-    .box{
+  .box {
     background-color: #F4F4F4;
-    border-radius: 7px ;
+    border-radius: 7px;
     width: 80%;
     height: 500px;
     color: #333333;
     margin: 10% 10%;
-    padding: 20% 20% ;
+    padding: 20% 20%;
     overflow: hidden;
-    padding: 50px ;
+    padding: 50px;
     align-items: center;
     justify-content: space-around;
     float: none;
-    }
+  }
+
 </style>
