@@ -13,3 +13,4 @@ export const feather = feathers()
     storage: cookie
   }))
 export const userService = feather.service('users');
+export const consumerProductService  = feather.service('consumer-product');

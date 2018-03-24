@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <!-- <div class="container">
       <div class="container">
         <div class="row">
           <div class="col-sm">
@@ -61,7 +61,7 @@
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
-        </div>
+        </div> -->
   </main>
 </template>
 <style>

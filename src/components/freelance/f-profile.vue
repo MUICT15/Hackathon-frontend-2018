@@ -20,7 +20,7 @@
             </fieldset>
         </li>
         <li><a href="news.asp">Profile</a></li>
-        <li style="background-color: red"><a href="contact.asp">Upgrade to Fast-Lane</a></li>
+        <!-- <li style="background-color: red"><a href="contact.asp">Upgrade to Fast-Lane</a></li> -->
     </ul>
 </center>
     <div style="margin-left:175pt;padding:20px 20px;height:1000px">
