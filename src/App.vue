@@ -38,10 +38,13 @@
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="/">Navbar</a>
       <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand rounded-circle" href="#">
+        <a class="navbar-brand rounded-circle" href="/">
+<!-- <<<<<<< HEAD
           <!-- <img src="./assets/29550207_1542615552515838_771666361_n (1).png" class="rounded-circle" alt=""> -->
+<!-- ======= -->
+          <img src="./assets/29550207_1542615552515838_771666361_n.png" class="rounded-circle" alt="">
+<!-- >>>>>>> 186f9d767f31263838f8fb4e6f9e83122b599b7f -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
