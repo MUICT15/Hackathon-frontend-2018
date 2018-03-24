@@ -8,10 +8,12 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item ml-auto">
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Registration</button>
-        <button type="button" class="btn btn-bg" data-toggle="modal" data-target="#exampleModal">Login</button>
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav mr-2">
+          <li class="nav-item" >
+            <a style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google" >Registration</a>/
+            <a  style="display: inline-block" class="nav-link" href="http://api.localhost/auth/google">Login</a>
           </li>
           </ul>
       </div>
@@ -25,10 +27,9 @@
     name: 'app',
     data() {
       return {
-    isLoggedIn:true
+        isLoggedIn: true
       }
     },
-    name: 'app'
   }
 
 </script>

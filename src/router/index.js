@@ -8,6 +8,7 @@ import otsTemplete from '@/components/b-owner/ots-templete'
 import fDashboard from '@/components/freelance/f-dashboard'
 import fProfile from '@/components/freelance/f-profile'
 import jobBidding from '@/components/freelance/job-bidding'
+import Login from '@/components/login'
 
 Vue.use(Router)
 
@@ -52,5 +53,10 @@ export default new Router({
       name: 'jobBidding',
       component: jobBidding
     },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    }
   ]
 })
