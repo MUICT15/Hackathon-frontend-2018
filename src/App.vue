@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand rounded-circle" href="#"><img src="./assets/29550207_1542615552515838_771666361_n (1).png" class="rounded-circle" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,6 +35,9 @@
 </script>
 
 <style>
+.navbar-brand{
+  background-color:  #03a9f4;
+}
   .navbar-custom {
     background-color: #67DAFF;
   }
@@ -89,5 +92,8 @@
     box-sizing: border-box;
     padding-top: 16px;
   }
-
+  img{
+    width: 6vw;
+    height: 6vw;
+  }
 </style>
