@@ -9,7 +9,7 @@
       <div class="col-md-6 col-sm-6 col-xs-12 text-center">
         <img src="https://image.flaticon.com/icons/svg/265/265667.svg">
         <br>
-        <button class="btn btn-primary">Business owner</button>
+        <button class="btn btn-primary" @click="bussinessOwner()">Business owner</button>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 text-center">
         <img src="https://image.flaticon.com/icons/svg/265/265668.svg">

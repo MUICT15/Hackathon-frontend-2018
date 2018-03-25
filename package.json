@@ -10,12 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "feathers": "^2.2.4",
     "feathers-authentication-client": "^0.3.3",
     "feathers-hooks": "^2.1.2",
     "feathers-socketio": "^2.0.1",
     "js-cookie": "^2.2.0",
     "jwt-decode": "^2.2.0",
+    "qs": "^6.5.1",
     "socket.io-client": "^2.0.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

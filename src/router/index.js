@@ -47,7 +47,7 @@ export default new Router({
       component: fDashboard
     },
     {
-      path: '/fProfile',
+      path: '/fProfile/:id',
       name: 'fProfile',
       component: fProfile
     },
