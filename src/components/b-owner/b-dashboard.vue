@@ -14,25 +14,25 @@
               <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputPassword">
+                  <input type="text" class="form-control" id="inputPassword" v-model="name">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Number</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputPassword">
+                  <input type="text" class="form-control" id="inputPassword" v-model="number">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Expire Month</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputPassword">
+                  <input type="text" class="form-control" id="inputPassword" v-model="month">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Expire Year</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputPassword">
+                  <input type="text" class="form-control" id="inputPassword" v-model="year">
                 </div>
               </div>
               <div class="form-group row">
@@ -41,12 +41,12 @@
                   <input type="password" class="form-control" id="inputPassword">
                 </div>
               </div>
-              <h3>จำนวนเงิน {{sumMoney}}</h3>
+              <h3>จำนวนเงิน : {{sumMoney}}</h3>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary" @click="payment()">Save changes</button>
           </div>
         </div>
       </div>
@@ -169,17 +169,19 @@
         this.selectFreelancers.splice(index, 1)
       },
       selectFreelancer: function (index) {
+          let percentage = this.listFreelancer[index].price * (11/100);
         let data = {
           id: this.listFreelancer[index].id,
           name: this.listFreelancer[index].name,
           price: this.listFreelancer[index].price
         }
         this.selectFreelancers.push(data)
+        this.sumMoney += percentage + this.listFreelancer[index].price;
       },
       addProject() {
         consumerProductService.create({
           consumerID: cookie.get('userId'),
-          consumerName: cookie.get('userId'),
+          consumerName: 'สมชาย',
           typeOfProduct: "Made to order",
           title: this.projectName,
           detail: this.projectDetail,
