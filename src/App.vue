@@ -27,7 +27,7 @@
                 </label>
               </div>
               <br>
-              <button type="button" class="btn btn-primary center" @click="login()">Login</button>
+              <button type="button" class="btn btn-primary center" @click="login()" data-dismiss="modal">Login</button>
               <a href="#" data-toggle="modal" data-target="#registerModal" data-dismiss="modal" style="padding:10px">Didn't join yet ? Register</a>
               <br>
               <br>
@@ -41,7 +41,7 @@
     </div>
 
     <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-      <img src="../src/assets/logowhite.png">
+      <a href="/"><img src="../src/assets/logowhite.png"></a>
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>

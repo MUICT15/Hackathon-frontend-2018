@@ -57,7 +57,7 @@
       <br>
       <br>
       <br>
-      <button class="btn btn-outline-success" style="width:350px; height:70px; font-size:17pt;">Register Now</button>
+      <router-link to="reg"><button class="btn btn-outline-success" style="width:350px; height:70px; font-size:17pt;">Register Now</button></router-link>
       <br>
       <br>
       <br>

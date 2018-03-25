@@ -27,6 +27,8 @@
   import {
     feather
   } from '../feathers';
+  import cookie from 'js-cookie'
+  import jwtDecode from 'jwt-decode';
   export default {
     data: function () {
       return {
@@ -41,6 +43,14 @@
           email: this.username,
           password: this.password
         }).then(response => {
+          console.log(response)
+          const id = cookie.get('feathers-jwt')
+          if (id != undefined) {
+            const {
+              userId
+            } = jwtDecode(id);
+            cookie.set('userId', userId)
+          }
           this.$router.push('userAgent')
         });
       }

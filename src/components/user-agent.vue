@@ -15,9 +15,9 @@
         <img src="https://image.flaticon.com/icons/svg/265/265668.svg">
         <br>
         <button class="btn btn-primary" @click="freelancer()"> Freelancer</button>
+        <!-- <br>
         <br>
-        <br>
-        <button class="btn btn-primary"> premium Freelancer</button>
+        <button class="btn btn-primary"> premium Freelancer</button> -->
       </div>
     </div>
   </div>

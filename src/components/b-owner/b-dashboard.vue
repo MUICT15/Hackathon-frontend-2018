@@ -46,7 +46,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" @click="payment()">Save changes</button>
+            <button type="button" class="btn btn-primary" @click="payment()" data-dismiss="modal">Save changes</button>
           </div>
         </div>
       </div>
@@ -121,10 +121,10 @@
           <label for="pjname">Project name</label>
           <input type="text" class="form-control" id="pjname" placeholder="Enter project name" name="pjname" v-model="projectName">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="pwd">Price</label>
           <input type="number" class="form-control" id="pwd" placeholder="Enter price" name="pswd" v-model="projectPrice">
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="pwd2">Requirement</label>
           <textarea type="text" class="form-control" id="pwd2" placeholder="Enter Requirement" name="rqq" v-model="projectDetail">
@@ -155,7 +155,7 @@
         projectName: '',
         projectDuration: '',
         projectDetail: '',
-        projectPrice: '',
+        projectPrice: 0,
         selectFreelancers: [],
         sumMoney: 0,
         name: '',
