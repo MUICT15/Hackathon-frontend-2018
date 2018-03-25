@@ -139,7 +139,8 @@
 <script>
   import mtoComponent from './mto-form.vue';
   import {
-    consumerProductService
+    consumerProductService,
+    paymentService
   } from '../../feathers';
   import cookie from 'js-cookie';
   import axios from 'axios';
@@ -211,7 +212,13 @@
           json: true
         }
         axios(config).then((data) => {
-          console.log(data)
+          console.log(data.data.id)
+          paymentService.create({
+              price: this.sumMoney,
+              token: data.data.id
+          })
+        }).then((data)=>{
+            console.log(data)
         })
       }
     },
