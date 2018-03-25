@@ -4,7 +4,6 @@
       <div class="container">
         <div class="row">
           <div class="col-sm">
-            <img id="homeimg" src="https://images.vexels.com/media/users/3/144435/raw/9c5af286a9bf9bb8ef5240f179601e04-abstract-background-with-colorful-squares-and-lines.jpg">
           </div>
         </div>
       </div>
@@ -43,10 +42,7 @@
       <div class="row align-items-end" style="background-color:#9ccc65" id="#homeimg">
         <div class="col">
           <h1>Welcome to Star Cruise Platform</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>At Star Cruise, our goal is to provide connection for the SME business owners as well as freelancers who are looking for a consistent job and/or revenue</p>
           <div class="row">
             <div class="col-sm">
               <router-link to="userAgent">Test</router-link>

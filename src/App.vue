@@ -1,6 +1,8 @@
 <template>
+
+  <!-- Login modal-->
   <div id="app">
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
@@ -26,7 +28,7 @@
               </div>
               <br>
               <button type="button" class="btn btn-primary center" @click="login()">Login</button>
-              <router-link to="reg" style="padding:10px">Didn't join yet ? Register</router-link>
+              <a href="#" data-toggle="modal" data-target="#registerModal" data-dismiss="modal" style="padding:10px">Didn't join yet ? Register</a>
               <br>
               <br>
               <a href="http://api.localhost/auth/google">
@@ -37,12 +39,47 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="/">Navbar</a>
-      <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand rounded-circle" href="#">
+
+    <!--Registration modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="text" class="form-control" id="email" v-model="username">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" v-model="password">
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary center" @click="login()">Register</button>
+              <a href="#" data-toggle="modal" data-target="#loginModal" data-dismiss="modal" style="padding:10px">Already have an account ? Log in</a>
+              <br>
+              <br>
+              <a href="http://api.localhost/auth/google">
+                <!--<button type="button" class="btn google center">Login With Google</button>-->
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav style="height: 50px" class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav style="height: 50px" class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand rounded-circle" href="/">
           <img src="./assets/29550207_1542615552515838_771666361_n.png" class="rounded-circle" alt="">
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,8 +90,9 @@
           </ul>
           <ul class="navbar-nav mr-2">
             <li class="nav-item">
-              <router-link style="display: inline-block" class="nav-link" to="reg">Registration</router-link>/
-              <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+              <!--<router-link style="display: inline-block" class="nav-link" to="reg" data-toggle="modal" data-target="#registerModal">Registration</router-link>/-->
+              <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Registration</a>
+              <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
             </li>
           </ul>
         </div>
