@@ -6,7 +6,7 @@ Vue.use(Vuex)
 // root state object.
 // each Vuex instance is just a single state tree.
 const state = {
-  count: 0
+  authenticated: false
 }
 
 // mutations are operations that actually mutates the state.
@@ -15,8 +15,8 @@ const state = {
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-  increment (state) {
-    state.count++
+  authenticate (state) {
+    state.authenticated = true
   },
   decrement (state) {
     state.count--

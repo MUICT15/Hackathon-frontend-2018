@@ -40,6 +40,7 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <!--Registration modal -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -81,10 +82,17 @@
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+=======
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
+          <img src="./assets/logowhite.png" alt="">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+>>>>>>> 5e3238d37d6fc11df67bf7f0d7c41b59b833eb33
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+<<<<<<< HEAD
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
           </ul>
@@ -93,6 +101,14 @@
               <!--<router-link style="display: inline-block" class="nav-link" to="reg" data-toggle="modal" data-target="#registerModal">Registration</router-link>/-->
               <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Registration</a>
               <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+=======
+        <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+        
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ml-auto">
+              <router-link style="display: inline-block" class="nav-link" to="reg">Registration</router-link>/
+              <a style="display: inline-block" class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+>>>>>>> 5e3238d37d6fc11df67bf7f0d7c41b59b833eb33
             </li>
           </ul>
         </div>
@@ -103,6 +119,7 @@
 </template>
 
 <script>
+import {feather} from './feathers'
   export default {
     name: 'app',
     data() {
@@ -127,7 +144,7 @@
 
 </script>
 
-<style>
+<style scoped>
   .navbar-brand {
     background-color: #03a9f4;
   }
